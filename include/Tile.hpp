@@ -10,6 +10,7 @@ enum class Cell {
 
 class Tile {
 public:
+    Tile(const int x, const int y, const Cell type);
     [[nodiscard]] int get_x() const;
     [[nodiscard]] int get_y() const;
     [[nodiscard]] Cell get_type() const;
