@@ -14,6 +14,11 @@ class Snake {
 public:
     Snake();
 
+    [[nodiscard]] std::vector<Tile>& get_segments();
+    [[nodiscard]] Direction get_dir() const;
+
+    void set_dir(const Direction dir);
+
 private:
     std::vector<Tile> segments;
     Direction dir;
