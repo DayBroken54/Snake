@@ -1,9 +1,8 @@
 #include "Tile.h"
 
-Tile::Tile(const int x, const int y, const Cell type) {
-    this->x = x;
-    this->y = y;
-    this->type = type;
+Tile::Tile(const int x, const int y, const Cell type) :
+    x(x), y(y), type(type)
+{}
 
 int Tile::get_x() const {
     return x;
