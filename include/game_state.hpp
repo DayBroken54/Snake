@@ -12,6 +12,9 @@ class Game {
 public:
     Game();
 
+    int get_WIDTH() const;
+    int get_HEIGHT() const;
+
     void update();
     void move(Direction dir);
     void check_win();
