@@ -49,6 +49,7 @@ PYBIND11_MODULE(libgame, m) {
         .def("get_WIDTH", &Game::get_WIDTH)
         .def("get_HEIGHT", &Game::get_HEIGHT)
         .def("get_runtime_state", &Game::get_runtime_state)
+        .def("get_board_state", &Game::get_board_state)
         .def("update", &Game::update)
         .def("move", &Game::move)
         .def("check_win", &Game::check_win);
