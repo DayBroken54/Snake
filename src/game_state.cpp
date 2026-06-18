@@ -1,4 +1,4 @@
-#include "game_state.hpp"
+#include "Game_State.hpp"
 #include <random>
 
 Game::Game() :
@@ -10,6 +10,14 @@ Game::Game() :
     snake()
 {
     update();
+}
+
+int Game::get_WIDTH() const {
+    return WIDTH;
+}
+
+int Game::get_HEIGHT() const {
+    return HEIGHT;
 }
 
 void Game::update() {
