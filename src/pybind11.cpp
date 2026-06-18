@@ -5,7 +5,7 @@
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(snake_game, m) {
+PYBIND11_MODULE(libgame, m) {
     m.doc() = "Snake game bindings";
 
     py::enum_<Cell>(m, "Cell")
@@ -46,6 +46,8 @@ PYBIND11_MODULE(snake_game, m) {
 
     py::class_<Game>(m, "Game")
         .def(py::init<>())
+        .def("get_WIDTH", &Game::get_WIDTH)
+        .def("get_HEIGHT", &Game::get_HEIGHT)
         .def("update", &Game::update)
         .def("move", &Game::move)
         .def("check_win", &Game::check_win);
