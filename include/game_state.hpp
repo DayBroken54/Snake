@@ -14,6 +14,7 @@ public:
 
     int get_WIDTH() const;
     int get_HEIGHT() const;
+    Runtime get_runtime_state() const;
 
     void update();
     void move(Direction dir);
