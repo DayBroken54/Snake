@@ -24,6 +24,10 @@ Runtime Game::get_runtime_state() const {
     return runtime_state;
 }
 
+std::vector<Tile> Game::get_board_state() const {
+    return board_state;
+}
+
 void Game::update() {
     ate_food = false;
     board_state.clear();
@@ -127,3 +131,10 @@ void Game::check_win() {
 }
 
 void Game::generate_food() {
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    std::uniform_int_distribution<size_t> dist(0, empty_tiles.size() - 1);
+
+    const size_t index{dist(rng)};
+    food = empty_tiles[index];
+}
