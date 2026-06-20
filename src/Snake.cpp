@@ -1,10 +1,13 @@
 #include "Snake.hpp"
 
-Snake::Snake() {
-    segments.push_back({3, 5, Cell::HEAD});
-    segments.push_back({2, 5, Cell::BODY});
-    segments.push_back({1, 5, Cell::BODY});
-}
+Snake::Snake() :
+    segments{
+        {3, 5, Cell::HEAD},
+        {2, 5, Cell::BODY},
+        {1, 5, Cell::BODY}
+    },
+    dir{Direction::RIGHT}
+{}
 
 std::vector<Tile>& Snake::get_segments() {
     return segments;

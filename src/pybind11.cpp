@@ -52,5 +52,6 @@ PYBIND11_MODULE(libgame, m) {
         .def("get_board_state", &Game::get_board_state)
         .def("update", &Game::update)
         .def("move", &Game::move)
-        .def("check_win", &Game::check_win);
+        .def("check_win", &Game::check_win)
+        .def("reset", &Game::reset);
 }
